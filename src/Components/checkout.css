@@ -1,0 +1,90 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: 
+    linear-gradient(to bottom right, 
+        orange 50%, 
+        white 50%) top left,
+    linear-gradient(to top left, 
+        white 50%, 
+        orange 50%) bottom right;    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+  }
+  
+  span {
+    color: red;
+    font-size: 12px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    form {
+      padding: 15px;
+    }
+  
+    input {
+      padding: 8px;
+    }
+  
+    button {
+      padding: 8px 15px;
+    }
+  }
