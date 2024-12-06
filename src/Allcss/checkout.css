@@ -1,0 +1,129 @@
+.check-out {
+  width: 400px;
+  margin: 0 auto;
+  background: 
+    linear-gradient(to bottom right, 
+        orange 50%, 
+        white 50%) top left,
+    linear-gradient(to top left, 
+        white 50%, 
+        orange 50%) bottom right; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  position: fixed; /* Fixed positioning for centering on screen */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning to truly center */
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 0px;
+}
+
+.check-out div {
+  margin-bottom: 15px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+}
+
+span {
+  color: red;
+  font-size: 12px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Large screens (desktops and up) */
+@media (min-width: 1200px) {
+  form {
+    width: 500px; /* Slightly wider form for large screens */
+  }
+}
+
+/* Tablets and small devices */
+@media (max-width: 768px) {
+  .check-out {
+    width: 90%; /* Full width for smaller devices */
+    padding: 15px;
+  }
+
+  input, select {
+    padding: 8px; /* Reduced padding for smaller devices */
+  }
+
+  button {
+    padding: 8px 15px; /* Slightly smaller button on small screens */
+  }
+
+  .map-container iframe {
+    height: 200px; /* Adjust map size for small screens */
+  }
+}
+
+/* Mobile devices (portrait) */
+@media (max-width: 480px) {
+  .check-out {
+    width: 90%; /* Full width for very small screens */
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 10px; /* Smaller buttons for mobile devices */
+  }
+
+  .map-container iframe {
+    height: 200px; /* Adjust map size for small mobile screens */
+  }
+
+  input, select {
+    padding: 8px; /* Ensure inputs look good on smaller screens */
+  }
+}
